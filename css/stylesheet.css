@@ -5,31 +5,34 @@ body {
 .container {
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
 }
 
 .box {
   width: 100%;
+  padding: 1%;
 }
 
 /* Mobile or Small Screen Style */
 @media screen and (min-width: 1px) and (max-width: 400px) {
   .header {
-    padding: 1.5em;
+    padding: 2%;
     border: 2px solid blue;
-    border-radius: 5px;
   }
 
   .avatar {
     width: 20%;
   }
 
+  #prof-image {
+    width: 100%;
+    padding: 5%
+    border-radius: 50%;
+    background-color: cyan;
+  }
+
   .title-bar {
     width: 80%;
   }
 
-}
-
-#prof-image {
-  width: 10%;
-  border-radius: 50%;
 }
