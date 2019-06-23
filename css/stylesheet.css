@@ -4,6 +4,6 @@ body {
 
 div.header {
   height: 20%;
-  border-style: solid;
-
+  border: 2px solid blue;
+  border-radius: 5px;
 }
