@@ -26,6 +26,7 @@ h1 {
 }
 
 nav {
+  background-color: darkblue;
   width: 300px;
   position: absolute;
   /* This trasform moves the drawer off canvas. */
