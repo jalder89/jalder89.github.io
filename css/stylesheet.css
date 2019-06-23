@@ -28,7 +28,7 @@ h1 {
 nav {
   color: white;
   background-color: darkblue;
-  width: 50%;
+  width: 200px;
   height: 100%;
   position: absolute;
   /* This trasform moves the drawer off canvas. */
@@ -37,6 +37,12 @@ nav {
   /* Optionally, we animate the drawer. */
   transition: transform 0.3s ease;
 }
+
+#nav-head {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 nav.open {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
