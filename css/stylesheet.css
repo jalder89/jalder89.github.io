@@ -17,7 +17,7 @@ body {
 }
 
 /* Mobile or Small Screen Style */
-@media screen and (min-width: 1px) and (max-width: 400px) {
+@media screen and (min-width: 1px) and (max-width: 450px) {
   .header {
     padding: 1%;
     border: 2px solid blue;
