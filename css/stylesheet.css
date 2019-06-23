@@ -47,7 +47,7 @@ nav.open {
     background-color: darkblue;
     width: 200px;
     height: 100%;
-    margin-top: 37%
+    margin-top: 37%;
     position: absolute;
     /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
