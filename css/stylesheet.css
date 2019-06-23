@@ -8,24 +8,25 @@ body {
 }
 
 .box {
-  width= 100%;
-}
-
-.header {
-  height: 20%;
-  padding: 1.5em;
-  border: 2px solid blue;
-  border-radius: 5px;
+  width: 100%;
 }
 
 /* Mobile or Small Screen Style */
-@media screen and (min-width:1px) and (max-width: 400px) {
+@media screen and (min-width: 1px) and (max-width: 400px) {
+  .header {
+    padding: 1.5em;
+    border: 2px solid blue;
+    border-radius: 5px;
+  }
+
   .avatar {
     width: 20%;
   }
+
   .title-bar {
     width: 80%;
   }
+
 }
 
 #prof-image {
