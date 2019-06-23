@@ -25,6 +25,10 @@ h1 {
   background-color: white;
 }
 
+.incomplete {
+  text-decoration: line-through;
+}
+
 #nav-head {
   text-align: center;
   text-decoration: underline;
