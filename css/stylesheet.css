@@ -39,6 +39,10 @@ nav.open {
   transform: translate(0, 0);
 }
 
+.nav-link {
+  color: white;
+}
+
 /* Very Small Screen */
 @media screen and (min-width: 1px) and (max-width: 350px) {
   .header {
