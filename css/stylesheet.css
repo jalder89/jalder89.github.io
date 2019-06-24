@@ -3,7 +3,7 @@ body {
   background-image: radial-gradient(cyan 65%, lime);
 }
 
-h1 {
+h1, h2 {
   text-align: center;
 }
 
