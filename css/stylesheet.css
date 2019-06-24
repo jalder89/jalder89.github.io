@@ -185,5 +185,9 @@ nav.open {
 }
 
 @media screen and (min-width: 451px) {
+  #prof-image {
+    border-radius: 50%;
+    background-color: cyan;
+  }
 
 }
