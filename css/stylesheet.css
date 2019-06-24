@@ -43,6 +43,11 @@ nav.open {
   color: white;
 }
 
+.nav-list {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 #computer {
   width: 100%
 }
