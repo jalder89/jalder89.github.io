@@ -7,7 +7,7 @@ h1 {
   text-align: center;
 }
 
-.header {
+.top {
   background-color: white;
 }
 
@@ -45,7 +45,7 @@ nav.open {
 
 /* Very Small Screen */
 @media screen and (min-width: 1px) and (max-width: 350px) {
-  .header {
+  .top {
     padding: 1%;
     border: 2px solid blue;
   }
@@ -116,7 +116,7 @@ nav.open {
 
 /* Mobile or Small Screen Style */
 @media screen and (min-width: 351px) and (max-width: 450px) {
-  .header {
+  .top {
     padding: 1%;
     border: 2px solid blue;
   }
@@ -181,5 +181,9 @@ nav.open {
     width: 65%;
     text-align: center;
   }
+
+}
+
+@media screen and (min-width: 451px) {
 
 }
