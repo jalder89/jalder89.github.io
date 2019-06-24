@@ -44,8 +44,7 @@ nav.open {
 }
 
 #computer {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%
 }
 
 /* Very Small Screen */
