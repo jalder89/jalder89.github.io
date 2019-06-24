@@ -43,11 +43,6 @@ nav.open {
   color: white;
 }
 
-.nav-list {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
 #computer {
   width: 100%
 }
@@ -77,6 +72,11 @@ nav.open {
     display: inline-block;
     cursor: pointer;
     margin: auto;
+  }
+
+  .nav-list {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .bar1, .bar2, .bar3 {
@@ -146,6 +146,11 @@ nav.open {
   .nav-container {
     display: inline-block;
     cursor: pointer;
+  }
+
+  .nav-list {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .bar1, .bar2, .bar3 {
