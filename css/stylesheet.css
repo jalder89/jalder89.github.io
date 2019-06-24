@@ -43,6 +43,11 @@ nav.open {
   color: white;
 }
 
+#computer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Very Small Screen */
 @media screen and (min-width: 1px) and (max-width: 350px) {
   .top {
