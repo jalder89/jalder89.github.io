@@ -56,12 +56,8 @@ nav.open {
   padding-bottom: 15px;
 }
 
-#computer {
-  width: 100%
-}
-
-#guitar {
-  width: 100%
+.hobbyimg {
+  width: 100%;
 }
 
 /* Very Small Screen */
