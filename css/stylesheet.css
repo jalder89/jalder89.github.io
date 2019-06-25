@@ -3,7 +3,11 @@ body {
   background-image: radial-gradient(cyan 65%, lime);
 }
 
-h1, h2 {
+h1 {
+  text-align: center;
+}
+
+h2 {
   text-align: center;
 }
 
@@ -21,7 +25,11 @@ h1, h2 {
   padding: 1%;
 }
 
-.overview, .hobbies {
+.overview {
+  background-color: white;
+}
+
+.hobbies {
   background-color: white;
 }
 
@@ -48,7 +56,11 @@ nav.open {
   padding-bottom: 15px;
 }
 
-#computer, #guitar {
+#computer {
+  width: 100%
+}
+
+#guitar {
   width: 100%
 }
 
