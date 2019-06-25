@@ -21,7 +21,7 @@ h1, h2 {
   padding: 1%;
 }
 
-.overview {
+.overview, .hobbies {
   background-color: white;
 }
 
@@ -48,7 +48,7 @@ nav.open {
   padding-bottom: 15px;
 }
 
-#computer {
+#computer, #guitar {
   width: 100%
 }
 
