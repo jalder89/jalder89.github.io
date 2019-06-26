@@ -123,6 +123,7 @@ nav.open {
 
   #prof-image {
     width: 100%;
+    margin-top: 10%;
     padding: 5%;
     border-radius: 50%;
     background-color: cyan;
@@ -130,7 +131,9 @@ nav.open {
 
   .title-bar {
     width: 74%;
+    margin-top: 3%;
     text-align: center;
+    font-size: small;
   }
 
 }
