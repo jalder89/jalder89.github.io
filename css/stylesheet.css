@@ -42,7 +42,7 @@ h2 {
   text-decoration: underline;
 }
 
-nav.open {
+.open {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
@@ -67,11 +67,15 @@ nav.open {
     text-align: center;
   }
 
+  p {
+    padding: 1%;
+  }
+
   .top {
     padding: 1%;
     border: 2px solid blue;
   }
-
+ /* Nav box specs and transition */
   nav {
     color: white;
     background-color: darkblue;
@@ -91,7 +95,7 @@ nav.open {
     cursor: pointer;
     margin: auto;
   }
-
+  /* builds a hamburger using divs */
   .bar1, .bar2, .bar3 {
     width: 60px;
     height: 4px;
@@ -145,11 +149,15 @@ nav.open {
     text-align: center;
   }
 
+  p {
+    padding: 1%;
+  }
+
   .top {
     padding: 1%;
     border: 2px solid blue;
   }
-
+  /* Nav transform and animation from Udacity course. */
   nav {
     color: white;
     background-color: darkblue;
@@ -168,7 +176,7 @@ nav.open {
     display: inline-block;
     cursor: pointer;
   }
-
+  /* creates navicon bars from divs */
   .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
@@ -200,6 +208,7 @@ nav.open {
 
   #prof-image {
     width: 100%;
+    margin-top: 5%;
     padding: 5%;
     border-radius: 50%;
     background-color: cyan;
@@ -207,7 +216,9 @@ nav.open {
 
   .title-bar {
     width: 65%;
+    margin-top: 3%;
     text-align: center;
+    font-size: small;
   }
 
 }
