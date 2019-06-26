@@ -273,7 +273,7 @@ h2 {
  /* Rotate first bar */
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-6px, 6px) ;
   }
 
  /* Fade out the second bar */
