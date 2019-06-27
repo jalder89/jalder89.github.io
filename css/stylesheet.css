@@ -224,7 +224,7 @@ h2 {
 }
 
 /* Medium Screen Tablet design */
-@media screen and (min-width: 451px) {
+@media screen and (min-width: 451px) and (max-width: 1099px) {
   body {
     font-size: 120%;
   }
