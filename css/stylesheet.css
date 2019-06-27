@@ -391,4 +391,14 @@ h2 {
     text-align: center;
     font-size: 140%;
   }
+
+  .float-text {
+    float: left;
+    width: 45%
+  }
+
+  .float-image {
+    float: right;
+    width: 50%
+  }
 }
