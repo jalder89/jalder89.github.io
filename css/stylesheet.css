@@ -247,7 +247,7 @@ h2 {
 
 }
 
-@media screen and (min-width: 451px;) and (max-width: 834px) {
+@media screen and (min-width: 451px) and (max-width: 834px) {
   body {
     font-size: 120%;
   }
