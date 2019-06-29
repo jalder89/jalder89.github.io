@@ -468,7 +468,7 @@ h2 {
   nav {
     color: white;
     background-color: darkblue;
-    width: 200px;
+    width: 400px;
     height: 100%;
     position: absolute;
     /* This trasform moves the drawer off canvas. */
@@ -476,6 +476,10 @@ h2 {
     transform: translate(-300px, 0);
     /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
+  }
+
+  .drawer .nav-head ul {
+    margin-left: 112px;
   }
 
  /* Thanks to W3C for the awesome Navicon guide https://www.w3schools.com/howto/howto_css_menu_icon.asp */
