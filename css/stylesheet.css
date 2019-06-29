@@ -461,6 +461,8 @@ h2 {
   .top {
     padding: 1%;
     border: 2px solid blue;
+    position: relative;
+    height: 130px;
   }
   /* Nav transform and animation from Udacity course. */
   nav {
