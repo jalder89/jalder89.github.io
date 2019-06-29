@@ -87,7 +87,7 @@ h2 {
     bottom: 0;
     right: 0;
   }
-  
+
  /* Nav box specs and transition */
   nav {
     color: white;
@@ -173,6 +173,7 @@ h2 {
 
   .container {
     width: 97%;
+    height: 100%;
     overflow: auto;
     margin: auto;
     position: absolute;
