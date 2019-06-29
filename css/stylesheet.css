@@ -247,8 +247,22 @@ h2 {
 
 }
 
+@media screen and (min-width: 451px;) and (max-width: 834px) {
+
+  .top .container {
+    width: 97%;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+}
+
 /* Medium Screen Tablet design */
-@media screen and (min-width: 451px) and (max-width: 1099px) {
+@media screen and (min-width: 835px) and (max-width: 1099px) {
   body {
     font-size: 120%;
   }
@@ -270,7 +284,7 @@ h2 {
   }
 
   .top .container {
-    width: 97%;
+    width: 55%;
     overflow: auto;
     margin: auto;
     top: 0;
