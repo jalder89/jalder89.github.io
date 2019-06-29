@@ -269,7 +269,7 @@ h2 {
     height: 130px;
   }
 
-  .container {
+  .top .container {
     width: 97%;
     overflow: auto;
     margin: auto;
