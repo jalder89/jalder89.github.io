@@ -462,7 +462,7 @@ h2 {
     padding: 1%;
     border: 2px solid blue;
     position: relative;
-    height: 130px;
+    height: 276px;
   }
   /* Nav transform and animation from Udacity course. */
   nav {
@@ -482,7 +482,7 @@ h2 {
   .nav-container {
     display: inline-block;
     cursor: pointer;
-    margin-left: 2%;
+    margin-left: auto;
   }
   /* creates navicon bars from divs */
   .bar1, .bar2, .bar3 {
@@ -516,15 +516,13 @@ h2 {
 
   #prof-image {
     width: 100%;
-    margin-top: 5%;
-    padding: 5%;
     border-radius: 50%;
     background-color: cyan;
   }
 
   .title-bar {
     width: 65%;
-    margin-top: 3%;
+    margin-top: 44px;
     text-align: center;
     font-size: 140%;
   }
