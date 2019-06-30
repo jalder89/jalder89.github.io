@@ -43,12 +43,12 @@ h2 {
   text-align: center;
   text-decoration: underline;
 }
-/*moves nav pane into view when navicon is clicked open*/
+/* moves nav pane into view when navicon is clicked open */
 .open {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-/*sets nav links to a visible color and pads them*/
+/* sets nav links to a visible color and pads them */
 .nav-link {
   color: white;
 }
@@ -108,27 +108,27 @@ h2 {
     margin: auto;
   }
   /* builds a hamburger using divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 60px;
     height: 4px;
-    background-color: #333;
+    background-color: black;
     margin: 6px 0;
     transition: 0.4s;
   }
 
- /* Rotate first bar */
-  .change .bar1 {
+ /* Rotate first line */
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
   }
 
- /* Fade out the second bar */
-  .change .bar2 {
+ /* Fade out */
+  .change .burg2 {
     opacity: 0;
   }
 
- /* Rotate last bar */
-  .change .bar3 {
+ /* Rotate last line */
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
@@ -136,7 +136,7 @@ h2 {
   .avatar {
     width: 20%;
   }
-/*Rounds profile image and sets a padding ring to the color cyan*/
+/* Rounds profile image and sets a padding ring to the color cyan */
   #prof-image {
     width: 100%;
     margin-top: 10%;
@@ -200,27 +200,27 @@ h2 {
     cursor: pointer;
   }
   /* creates navicon bars from divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: black;
     margin: 6px 0;
     transition: 0.4s;
   }
 
  /* Rotate first bar */
-  .change .bar1 {
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
   }
 
  /* Fade out the second bar */
-  .change .bar2 {
+  .change .burg2 {
     opacity: 0;
   }
 
  /* Rotate last bar */
-  .change .bar3 {
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
@@ -298,7 +298,7 @@ h2 {
     margin-left: 2%;
   }
   /* creates navicon bars from divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 45px;
     height: 5px;
     background-color: black;
@@ -307,18 +307,18 @@ h2 {
   }
 
  /* Rotate first bar */
-  .change .bar1 {
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-6px, 6px) ;
   }
 
  /* Fade out the second bar */
-  .change .bar2 {
+  .change .burg2 {
     opacity: 0;
   }
 
  /* Rotate last bar */
-  .change .bar3 {
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
@@ -395,7 +395,7 @@ h2 {
     margin-left: 2%;
   }
   /* creates navicon bars from divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 45px;
     height: 5px;
     background-color: black;
@@ -404,18 +404,18 @@ h2 {
   }
 
  /* Rotate first bar */
-  .change .bar1 {
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-6px, 6px) ;
   }
 
  /* Fade out the second bar */
-  .change .bar2 {
+  .change .burg2 {
     opacity: 0;
   }
 
  /* Rotate last bar */
-  .change .bar3 {
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
@@ -485,7 +485,7 @@ h2 {
     margin-left: auto;
   }
   /* creates navicon bars from divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 45px;
     height: 5px;
     background-color: black;
@@ -494,18 +494,18 @@ h2 {
   }
 
  /* Rotate first bar */
-  .change .bar1 {
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-6px, 6px) ;
   }
 
  /* Fade out the second bar */
-  .change .bar2 {
+  .change .burg2 {
     opacity: 0;
   }
 
  /* Rotate last bar */
-  .change .bar3 {
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
