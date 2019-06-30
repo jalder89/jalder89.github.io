@@ -473,7 +473,7 @@ h2 {
     position: absolute;
     /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-400px, 0);
-    transform: translate(-400px, 0);
+    transform: translate(-408px, 0);
     /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
