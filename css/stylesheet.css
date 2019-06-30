@@ -1,4 +1,5 @@
-/* Global Style */
+/* Global Style sets background,
+aligns default h1 and h2 tags nave elents to center */
 body {
   background-image: radial-gradient(cyan 65%, lime);
 }
@@ -42,12 +43,12 @@ h2 {
   text-align: center;
   text-decoration: underline;
 }
-
+/*moves nav pane into view when navicon is clicked open*/
 .open {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-
+/*sets nav links to a visible color and pads them*/
 .nav-link {
   color: white;
 }
@@ -87,17 +88,16 @@ h2 {
     right: 0;
   }
 
- /* Nav box specs and transition */
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
     width: 200px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
 
@@ -136,7 +136,7 @@ h2 {
   .avatar {
     width: 20%;
   }
-
+/*Rounds profile image and sets a padding ring to the color cyan*/
   #prof-image {
     width: 100%;
     margin-top: 10%;
@@ -181,17 +181,16 @@ h2 {
     right: 0;
   }
 
-  /* Nav transform and animation from Udacity course. */
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
     width: 200px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
 
@@ -279,17 +278,16 @@ h2 {
   }
 
 
-  /* Nav transform and animation from Udacity course. */
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
     width: 200px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
 
@@ -377,17 +375,16 @@ h2 {
     right: 0;
   }
 
-  /* Nav transform and animation from Udacity course. */
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
     width: 200px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
 
@@ -464,17 +461,16 @@ h2 {
     position: relative;
     height: 276px;
   }
-  /* Nav transform and animation from Udacity course. */
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
     width: 400px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-400px, 0);
     transform: translate(-408px, 0);
-    /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
 
