@@ -8,6 +8,7 @@
     <title>William's Portfolio Site</title>
   </head>
   <body>
+    <!--constructs the header of the page, includes avatar/logo, title, and navicon-->
     <header class="top">
       <div class="container">
         <div class="avatar box">
@@ -16,6 +17,7 @@
         <div class="title-bar box">
           <h1>William's Profile</h1>
         </div>
+        <!--Uses divs to construct a navicon that reacts to clicks-->
         <div class="nav-container" onclick="myFunction(this)">
           <div class="bar1"></div>
           <div class="bar2"></div>
@@ -23,6 +25,7 @@
         </div>
       </div>
     </header>
+    <!--Builds nav drawer and adds an unordered list of nav links-->
     <nav id="drawer">
       <div class=box>
       <h2 id="nav-head">Navigation</h2>
@@ -36,42 +39,47 @@
       </ul>
     </div>
     </nav>
-    <section class="hobbies">
+    <!--Denotes the Hobbies main section of content.
+    This includes the Computers, Music, Motorcycles, and Game sections-->
+    <main class="hobbies">
       <div class="container">
         <h2>Hobbies</h2>
-        <div class="computers box">
+        <!--Constructs a box of hobbies
+        with images and text floated to the right and left respectively.
+        each section denotes a specific hobby-->
+        <section class="computers box">
           <div class="float-text">
             <p>I'm a total technology nerd... If it bleeps, blips, bloops, does computations, runs software, or just basically mind boggles most people; then I'm probably into it. It all started when I hit my teenage years, and I found an obsession in PC's. I found myself ripping apart every piece of electronic equipment I had trying to figure out how it worked, what might be causing issues, or just to try and upgrade it to something better.</p>
           </div>
           <div class="float-image">
             <img class="hobbyimg" srcset="images/computer-640.jpg 640w, images/computer-1280.jpg 1280w, images/computer-1920.jpg" sizes="(max-width: 450px) 300px, (max-width: 770px) 600px, " src="images/computer-1280.jpg" alt="computers">
           </div>
-        </div>
-        <div class="music box">
+        </section>
+        <section class="music box">
           <div class="float-text">
             <p>I'm also an avid musician and I play guitar, drums, and bass and love most types of music, however, Metal is my favorite. I've most recently been into the new line up of music on Liquid Metal satellite radio. There are some awesome bands hitting the scene, and some old ones making a return, who are worth listening to.</p>
           </div>
           <div class="float-image">
             <img class="hobbyimg" srcset="images/guitar-640.jpg 640w, images/guitar-1280.jpg 1280w, images/guitar-1920.jpg" sizes="(max-width: 450px) 300px, (max-width: 770px) 600px, " src="images/guitar-1280.jpg" alt="guitar">
           </div>
-        </div>
-        <div class="motorcycles box">
+        </section>
+        <section class="motorcycles box">
           <div class="float-text">
             <p>I'm a lover of motorcycles and loud noises as well, one could say those passions probably go hand in hand. I started riding dirt bikes when I was 14 and have preferred the two wheeled method of travel ever since. I currently own a 2019 Harley Davidson Street Bob with Vance and Hinese Short Shots, Roland Sands Turbine intake, and the 107ci Milwaukee 8 engine. You can check out pics on my Instagram linked in the Nav!</p>
           </div>
           <div class="float-image">
             <img class="hobbyimg" srcset="images/motorcycle-640.jpg 640w, images/motorcycle-1280.jpg 1280w, images/motorcycle-1920.jpg" sizes="(max-width: 450px) 300px, (max-width: 770px) 600px, " src="images/motorcycle-1280.jpg" alt="motorcycle">
           </div>
-        </div>
-        <div class="game box">
+        </section>
+        <section class="game box">
           <div class="float-text">
             <p>Based on my love for computers if you haven't guessed yet, I'm also a lover of video games! I can enjoy pretty much any game genre but RPGs, Shooters, and Action games are among my favorites. I've also been known to get into some horror, racing, and sports games as well. The Fallout and Elder Scross series are probably my favorite games with Cyberpunk 2077 likely to take the top of that list soon!</p>
           </div>
           <div class="float-image">
             <img class="hobbyimg" srcset="images/mario-640.jpg 640w, images/mario-1280.jpg 1280w, images/mario-1920.jpg" sizes="(max-width: 450px) 300px, (max-width: 770px) 600px, " src="images/mario-1280.jpg" alt="mario">
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </main>
   </body>
 </html>
