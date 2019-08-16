@@ -1,4 +1,5 @@
-/* Global Style */
+/* Global Style sets background,
+aligns default h1 and h2 tags nave elents to center */
 body {
   background-image: radial-gradient(cyan 65%, lime);
 }
@@ -13,6 +14,7 @@ h2 {
 
 .top {
   background-color: white;
+  height: 100%;
 }
 
 .container {
@@ -41,12 +43,12 @@ h2 {
   text-align: center;
   text-decoration: underline;
 }
-
+/* moves nav pane into view when navicon is clicked open */
 .open {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-
+/* sets nav links to a visible color and pads them */
 .nav-link {
   color: white;
 }
@@ -58,6 +60,10 @@ h2 {
 
 .hobbyimg {
   width: 100%;
+}
+
+footer {
+  background-color: white;
 }
 
 /* Very Small Screen */
@@ -75,17 +81,27 @@ h2 {
     padding: 1%;
     border: 2px solid blue;
   }
- /* Nav box specs and transition */
+
+  .container {
+    width: 97%;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
     width: 200px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
 
@@ -96,27 +112,27 @@ h2 {
     margin: auto;
   }
   /* builds a hamburger using divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 60px;
     height: 4px;
-    background-color: #333;
+    background-color: black;
     margin: 6px 0;
     transition: 0.4s;
   }
 
- /* Rotate first bar */
-  .change .bar1 {
+ /* Rotate first line */
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
   }
 
- /* Fade out the second bar */
-  .change .bar2 {
+ /* Fade out */
+  .change .burg2 {
     opacity: 0;
   }
 
- /* Rotate last bar */
-  .change .bar3 {
+ /* Rotate last line */
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
@@ -124,7 +140,7 @@ h2 {
   .avatar {
     width: 20%;
   }
-
+/* Rounds profile image and sets a padding ring to the color cyan */
   #prof-image {
     width: 100%;
     margin-top: 10%;
@@ -157,17 +173,28 @@ h2 {
     padding: 1%;
     border: 2px solid blue;
   }
-  /* Nav transform and animation from Udacity course. */
+
+  .container {
+    width: 97%;
+    height: 100%;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
     width: 200px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
 
@@ -177,27 +204,27 @@ h2 {
     cursor: pointer;
   }
   /* creates navicon bars from divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: black;
     margin: 6px 0;
     transition: 0.4s;
   }
 
  /* Rotate first bar */
-  .change .bar1 {
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
   }
 
  /* Fade out the second bar */
-  .change .bar2 {
+  .change .burg2 {
     opacity: 0;
   }
 
  /* Rotate last bar */
-  .change .bar3 {
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
@@ -223,8 +250,7 @@ h2 {
 
 }
 
-/* Medium Screen Tablet design */
-@media screen and (min-width: 451px) and (max-width: 1099px) {
+@media screen and (min-width: 451px) and (max-width: 834px) {
   body {
     font-size: 120%;
   }
@@ -241,18 +267,31 @@ h2 {
   .top {
     padding: 1%;
     border: 2px solid blue;
+    position: relative;
+    height: 130px;
   }
-  /* Nav transform and animation from Udacity course. */
+
+  .top .container {
+    width: 415px;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
     width: 200px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
     transition: transform 0.3s ease;
   }
 
@@ -263,7 +302,7 @@ h2 {
     margin-left: 2%;
   }
   /* creates navicon bars from divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 45px;
     height: 5px;
     background-color: black;
@@ -272,24 +311,24 @@ h2 {
   }
 
  /* Rotate first bar */
-  .change .bar1 {
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-6px, 6px) ;
   }
 
  /* Fade out the second bar */
-  .change .bar2 {
+  .change .burg2 {
     opacity: 0;
   }
 
  /* Rotate last bar */
-  .change .bar3 {
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
 
   .avatar {
-    width: 20%;
+    width: 80px;
   }
 
   #prof-image {
@@ -301,14 +340,111 @@ h2 {
   }
 
   .title-bar {
-    width: 65%;
-    margin-top: 3%;
+    width: 250px;
+    margin-top: 10px;
     text-align: center;
-    font-size: 140%;
+    font-size: 16px;
   }
 }
 
-/* Large Screen Tablet and Desktop design */
+/* Medium Screen Tablet design */
+@media screen and (min-width: 835px) and (max-width: 1099px) {
+  body {
+    font-size: 120%;
+  }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    padding: 1%;
+  }
+
+  .top {
+    padding: 1%;
+    border: 2px solid blue;
+    position: relative;
+    height: 130px;
+  }
+
+  .top .container {
+    width: 415px;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
+  nav {
+    color: white;
+    background-color: darkblue;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+  }
+
+ /* Thanks to W3C for the awesome Navicon guide https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+  .nav-container {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 2%;
+  }
+  /* creates navicon bars from divs */
+  .burg1, .burg2, .burg3 {
+    width: 45px;
+    height: 5px;
+    background-color: black;
+    margin: 5px 0%;
+    transition: 0.4s;
+  }
+
+ /* Rotate first bar */
+  .change .burg1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-6px, 6px) ;
+  }
+
+ /* Fade out the second bar */
+  .change .burg2 {
+    opacity: 0;
+  }
+
+ /* Rotate last bar */
+  .change .burg3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+  .avatar {
+    width: 80px;
+  }
+
+  #prof-image {
+    width: 100%;
+    margin-top: 5%;
+    padding: 5%;
+    border-radius: 50%;
+    background-color: cyan;
+  }
+
+  .title-bar {
+    width: 250px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+/*Large Screen Tablet and Desktop design TEST combine medium with desktop*/
 @media screen and (min-width: 1100px) {
   body {
     font-size: 120%;
@@ -326,29 +462,34 @@ h2 {
   .top {
     padding: 1%;
     border: 2px solid blue;
+    position: relative;
+    height: 276px;
   }
-  /* Nav transform and animation from Udacity course. */
+  /* Nav transform and animation from Udacity course Moves nav off screen.
+  Also, we make this happen over time with a nice snappy transition. */
   nav {
     color: white;
     background-color: darkblue;
-    width: 200px;
+    width: 400px;
     height: 100%;
     position: absolute;
-    /* This trasform moves the drawer off canvas. */
-    -webkit-transform: translate(-300px, 0);
-    transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
+    -webkit-transform: translate(-400px, 0);
+    transform: translate(-408px, 0);
     transition: transform 0.3s ease;
+  }
+
+  #navul {
+    margin-left: 112px;
   }
 
  /* Thanks to W3C for the awesome Navicon guide https://www.w3schools.com/howto/howto_css_menu_icon.asp */
   .nav-container {
     display: inline-block;
     cursor: pointer;
-    margin-left: 2%;
+    margin-left: auto;
   }
   /* creates navicon bars from divs */
-  .bar1, .bar2, .bar3 {
+  .burg1, .burg2, .burg3 {
     width: 45px;
     height: 5px;
     background-color: black;
@@ -357,37 +498,36 @@ h2 {
   }
 
  /* Rotate first bar */
-  .change .bar1 {
+  .change .burg1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-6px, 6px) ;
   }
 
  /* Fade out the second bar */
-  .change .bar2 {
+  .change .burg2 {
     opacity: 0;
   }
 
  /* Rotate last bar */
-  .change .bar3 {
+  .change .burg3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
 
   .avatar {
-    width: 20%;
+    width: 233px;
   }
 
   #prof-image {
     width: 100%;
-    margin-top: 5%;
-    padding: 5%;
+    padding: 5px;
     border-radius: 50%;
     background-color: cyan;
   }
 
   .title-bar {
     width: 65%;
-    margin-top: 3%;
+    margin-top: 44px;
     text-align: center;
     font-size: 140%;
   }
