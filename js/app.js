@@ -2,14 +2,17 @@
  * Create a list that holds all of your cards
  */
 const cards = ['Diamond', 'Plane', 'Anchor', 'Bolt', 'Cube', 'Leaf', 'Bicycle', 'Bomb', 'Diamond', 'Plane', 'Anchor', 'Bolt', 'Cube', 'Leaf', 'Bicycle', 'Bomb'];
-let deck = document.querySelector('.deck');
+const deck = document.querySelector('.deck');
+
 
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
+ *   - build score table
  */
+
 // shuffle cards
 shuffle(cards);
 // Create card html
@@ -67,6 +70,31 @@ for (let i = 0; i < cards.length; i++) {
 for (let i = 0; i < cards.length; i++) {
   deck.innerHTML += cards[i];
 }
+// Add stars for scoring, needs refactoring for efficiency
+const scoreTable = document.querySelector('.score-panel .stars');
+const scoreBox1 = document.createElement('li');
+const scoreBox2 = document.createElement('li');
+const scoreBox3 = document.createElement('li');
+const scoreStars1 = document.createElement('i');
+const scoreStars2 = document.createElement('i');
+const scoreStars3 = document.createElement('i');
+
+scoreStars1.classList.add('fa')
+scoreStars1.classList.add('fa-star');
+scoreStars2.classList.add('fa')
+scoreStars2.classList.add('fa-star');
+scoreStars3.classList.add('fa')
+scoreStars3.classList.add('fa-star');
+
+scoreBox1.appendChild(scoreStars1);
+scoreBox2.appendChild(scoreStars2);
+scoreBox3.appendChild(scoreStars3);
+
+scoreTable.appendChild(scoreBox1);
+scoreTable.appendChild(scoreBox2);
+scoreTable.appendChild(scoreBox3);
+
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -102,44 +130,67 @@ let movesCounter = 0;
 let moves = document.querySelector('.moves');
 
 function cardClicked(clickEvent) {
+  // Tracks current cards class list for matching and catch purposes.
+  let thisEvent = clickEvent.target.classList;
+  console.log('Why? ' + thisEvent);
 
-  clickEvent.target.classList.add('match');
-  openCards.push(clickEvent.target);
-  clickCounter += 1;
-  console.log(clickCounter);
+  // Limits game code to not include already matched cards or clicking the deck.
+  if (thisEvent != 'card match' && thisEvent != 'deck') {
 
-  if (openCards !== undefined || openCards.length !== 0) {
-    if (openCards.length > 1) {
-      console.log('there is more than one card selected');
-      //cardMatch(openCards);
-      cardsMatch = openCards[0].innerHTML == openCards[1].innerHTML;
-      if (cardsMatch) {
-        console.log('cards matched!');
-        matchedCards.push(openCards[0]);
-        openCards.shift();
-        openCards.shift();
-        clickCounter = 0;
-        movesCounter += 1;
-        moves.textContent = movesCounter;
+    clickEvent.target.classList.add('match');
+    openCards.push(clickEvent.target);
+    clickCounter += 1;
+    console.log(clickCounter + '' + thisEvent);
 
-        if (matchedCards.length == 8) {
-          alert("Congratulations, you've won!" + "\nYour score was: " + movesCounter);
+    // Checks to make sure that openCards array is not empty or undefined.
+    if (openCards !== undefined || openCards.length !== 0) {
+      if (openCards.length > 1) {
+        console.log('there is more than one card selected');
+
+        // Checks to see if cards clicked matches and sets cardsMatch to True or False
+        cardsMatch = openCards[0].innerHTML == openCards[1].innerHTML;
+
+        // If cards match, add matched card to matchedCards array, clear openCards array, increments move counter, and resets click counter.
+        if (cardsMatch) {
+          console.log('cards matched!');
+          matchedCards.push(openCards[0]);
+          openCards.shift();
+          openCards.shift();
+          movesCounter += 1;
+          clickCounter = 0;
+          moves.textContent = movesCounter;
+
+          // Checks to see if the matched card was the last one to match and displays win alert
+          if (matchedCards.length == 8) {
+            alert("Congratulations, you've won!" + "\nYour score was: " + movesCounter);
+          }
         }
+
+        // Checks to see if cards did not match, closes cards, increments move counter, and resets clicks.
+        if (!cardsMatch) {
+          console.log('cards did not match');
+          if (clickCounter == 3) {
+            for (let i = 0; i < openCards.length - 1; i++) {
+              openCards[i].classList.remove('match');
+            }
+            openCards.shift();
+            openCards.shift();
+            movesCounter += 1;
+            clickCounter = 1;
+            moves.textContent = movesCounter;
+          }
+
+        }
+
       }
 
-      if (!cardsMatch) {
-        console.log('cards did not match');
-        if (clickCounter == 3) {
-          for (let i = 0; i < openCards.length - 1; i++) {
-            openCards[i].classList.remove('match');
-          }
-          openCards.shift();
-          openCards.shift();
-          clickCounter = 1;
-          movesCounter += 1;
-          moves.textContent = movesCounter;
-        }
-
+      // Removes stars from score as the move counter increases
+      if (movesCounter == 10 && clickCounter == 1) {
+        scoreStars3.parentNode.removeChild(scoreStars3);
+      }else if (movesCounter == 15 && clickCounter == 1) {
+        scoreStars2.parentNode.removeChild(scoreStars2);
+      }else if (movesCounter == 20 && clickCounter == 1) {
+        scoreStars1.parentNode.removeChild(scoreStars1);
       }
 
     }
