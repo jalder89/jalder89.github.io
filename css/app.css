@@ -107,3 +107,31 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+/*
+ * Win Game Alert Box
+ */
+
+.alert {
+   display: none;
+   padding: 20px;
+   align-items: center;
+   position: absolute;
+   background-color: black;
+   color: white;
+   margin-bottom: 15px;
+   border-radius: 8px;
+   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+ }
+
+.close {
+  background-color: grey;
+  border-radius: 8px;
+  margin-left: 20%;
+}
+
+.retry {
+  background-color: grey;
+  border-radius: 8px;
+  margin-left: 20%;
+}

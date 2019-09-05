@@ -2,7 +2,17 @@
  * Create a list that holds all of your cards
  */
 const cards = ['Diamond', 'Plane', 'Anchor', 'Bolt', 'Cube', 'Leaf', 'Bicycle', 'Bomb', 'Diamond', 'Plane', 'Anchor', 'Bolt', 'Cube', 'Leaf', 'Bicycle', 'Bomb'];
-const deck = document.querySelector('.deck');
+
+// Intialize and store deck and alert box element variables
+const DECK = document.querySelector('.deck');
+const ALERTBOX = document.querySelector('.alert');
+const ALERTSCORE = document.querySelector('.alert .score');
+const REPLAYBTN = document.querySelector('.restart');
+const TIME = document.querySelector('.score-panel .timer');
+const ALERTTIME = document.querySelector('.alert .timer');
+const CLOSEBUTTON = document.querySelector('.alert .close .button');
+const REPLAYALRTBUTTON = document.querySelector('.alert .retry .button');
+ALERTSCORE.innerHTML = '&star;&star;&star;';
 
 
 /*
@@ -10,66 +20,92 @@ const deck = document.querySelector('.deck');
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
- *   - build score table
+ *   - build score table and timer
  */
 
-// shuffle cards
+// Shuffle and create cards
 shuffle(cards);
-// Create card html
-for (let i = 0; i < cards.length; i++) {
+createCards();
+appendCards();
 
-  if (cards[i] === 'Diamond') {
-    cards[i] = '<li class="card">' +
-    '<i class="fa fa-diamond"></i>' +
-    '</li>';
-  }
+// Create card html function
+function createCards() {
+  for (let i = 0; i < cards.length; i++) {
 
-  if (cards[i] === 'Plane') {
-    cards[i] = '<li class="card">' +
-    '<i class="fa fa-paper-plane-o"></i>' +
-    '</li>';
-  }
+    if (cards[i] === 'Diamond') {
+      cards[i] = '<li class="card">' +
+      '<i class="fa fa-diamond"></i>' +
+      '</li>';
+    }
 
-  if (cards[i] === 'Anchor') {
-    cards[i] = '<li class="card">' +
-    '<i class="fa fa-anchor"></i>' +
-    '</li>';
-  }
+    if (cards[i] === 'Plane') {
+      cards[i] = '<li class="card">' +
+      '<i class="fa fa-paper-plane-o"></i>' +
+      '</li>';
+    }
 
-  if (cards[i] === 'Bolt') {
-    cards[i] = '<li class="card">' +
-    '<i class="fa fa-bolt"></i>' +
-    '</li>';
-  }
+    if (cards[i] === 'Anchor') {
+      cards[i] = '<li class="card">' +
+      '<i class="fa fa-anchor"></i>' +
+      '</li>';
+    }
 
-  if (cards[i] === 'Cube') {
-    cards[i] = '<li class="card">' +
-    '<i class="fa fa-cube"></i>' +
-    '</li>';
-  }
+    if (cards[i] === 'Bolt') {
+      cards[i] = '<li class="card">' +
+      '<i class="fa fa-bolt"></i>' +
+      '</li>';
+    }
 
-  if (cards[i] === 'Leaf') {
-    cards[i] = '<li class="card">' +
-    '<i class="fa fa-leaf"></i>' +
-    '</li>';
-  }
+    if (cards[i] === 'Cube') {
+      cards[i] = '<li class="card">' +
+      '<i class="fa fa-cube"></i>' +
+      '</li>';
+    }
 
-  if (cards[i] === 'Bicycle') {
-    cards[i] = '<li class="card">' +
-    '<i class="fa fa-bicycle"></i>' +
-    '</li>';
-  }
+    if (cards[i] === 'Leaf') {
+      cards[i] = '<li class="card">' +
+      '<i class="fa fa-leaf"></i>' +
+      '</li>';
+    }
 
-  if (cards[i] === 'Bomb') {
-    cards[i] = '<li class="card">' +
-    '<i class="fa fa-bomb"></i>' +
-    '</li>';
+    if (cards[i] === 'Bicycle') {
+      cards[i] = '<li class="card">' +
+      '<i class="fa fa-bicycle"></i>' +
+      '</li>';
+    }
+
+    if (cards[i] === 'Bomb') {
+      cards[i] = '<li class="card">' +
+      '<i class="fa fa-bomb"></i>' +
+      '</li>';
+    }
   }
 }
-// Append HTML to deck
-for (let i = 0; i < cards.length; i++) {
-  deck.innerHTML += cards[i];
+
+// Append HTML to deck function
+function appendCards(){
+  for (let i = 0; i < cards.length; i++) {
+    DECK.innerHTML += cards[i];
+  }
 }
+
+// Timer for timing the game
+let start = Date.now();
+
+let myTimer = setInterval(timerFunc, 1000)
+let timer = 0;
+
+function timerFunc() {
+  let difference = Date.now() - start;
+  timer = Math.floor(difference / 1000);
+  TIME.innerHTML = timer;
+  ALERTTIME.innerHTML = timer;
+}
+
+function stopTimer() {
+  clearInterval(myTimer);
+}
+
 // Add stars for scoring, needs refactoring for efficiency
 const scoreTable = document.querySelector('.score-panel .stars');
 const scoreBox1 = document.createElement('li');
@@ -162,7 +198,9 @@ function cardClicked(clickEvent) {
 
           // Checks to see if the matched card was the last one to match and displays win alert
           if (matchedCards.length == 8) {
-            alert("Congratulations, you've won!" + "\nYour score was: " + movesCounter);
+            stopTimer();
+            ALERTBOX.style.display = "block";
+
           }
         }
 
@@ -187,26 +225,64 @@ function cardClicked(clickEvent) {
       // Removes stars from score as the move counter increases
       if (movesCounter == 10 && clickCounter == 1) {
         scoreStars3.parentNode.removeChild(scoreStars3);
+        ALERTSCORE.innerHTML = '&star;&star;-';
       }else if (movesCounter == 15 && clickCounter == 1) {
         scoreStars2.parentNode.removeChild(scoreStars2);
+        ALERTSCORE.innerHTML = '&star;--';
       }else if (movesCounter == 20 && clickCounter == 1) {
         scoreStars1.parentNode.removeChild(scoreStars1);
+        ALERTSCORE.innerHTML = '---<br>Better Luck Next Time!';
       }
 
     }
   }
 }
 
-function cardMatch() {
+// Toggles Win Alert Box visibility
+function toggleAlert() {
+  if (ALERTBOX.style.display === "none") {
+    ALERTBOX.style.display = "block";
+  }else {
+    ALERTBOX.style.display = "none";
+  }
+}
+// Resets the game to a playable status after a win or clicking replay button
+function replay() {
+  // Flips cards back over
+  for (let i = 0; i < matchedCards.length; i++) {
+    matchedCards[i].classList.remove('match');
+  }
 
+  // Empties the matchedCard array so the win alert can display more than once
+  let matchedCardsLength = matchedCards.length;
+  for (let i = 0; i < matchedCardsLength; i++) {
+    matchedCards.shift();
+  }
+
+  /* Shuffles cards, resets deck, rebuilds deck with new cards,
+  * resets counters, score and timer for next play
+  */
+  shuffle(cards);
+  DECK.innerHTML = '';
+  appendCards();
+  movesCounter = 0;
+  clickCounter = 0;
+  moves.textContent = 0;
+  scoreBox1.appendChild(scoreStars1);
+  scoreBox2.appendChild(scoreStars2);
+  scoreBox3.appendChild(scoreStars3);
+  timer = 0;
+  start = Date.now();
+  TIME.innerHTML = timer;
+  myTimer = setInterval(timerFunc, 1000);
 }
 
-function cardsNotMatch() {
-
+function alertReplay() {
+  toggleAlert();
+  replay();
 }
 
-function addMove() {
-
-}
-
-deck.addEventListener('click', cardClicked);
+DECK.addEventListener('click', cardClicked);
+CLOSEBUTTON.addEventListener('click', toggleAlert);
+REPLAYALRTBUTTON.addEventListener('click', alertReplay);
+REPLAYBTN.addEventListener('click', replay);
