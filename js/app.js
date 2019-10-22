@@ -89,23 +89,6 @@ function appendCards(){
   }
 }
 
-// Timer for timing the game
-let start = Date.now();
-
-let myTimer = setInterval(timerFunc, 1000)
-let timer = 0;
-
-function timerFunc() {
-  let difference = Date.now() - start;
-  timer = Math.floor(difference / 1000);
-  TIME.innerHTML = timer;
-  ALERTTIME.innerHTML = timer;
-}
-
-function stopTimer() {
-  clearInterval(myTimer);
-}
-
 // Add stars for scoring, needs refactoring for efficiency
 const scoreTable = document.querySelector('.score-panel .stars');
 const scoreBox1 = document.createElement('li');
@@ -163,9 +146,32 @@ let openCards = [];
 let matchedCards = [];
 let clickCounter = 0;
 let movesCounter = 0;
+let gamestart = 0
 let moves = document.querySelector('.moves');
 
+// Timer for timing the game
+let start = 0;
+let myTimer = 0;
+let timer = 0;
+
+function timerFunc() {
+  let difference = Date.now() - start;
+  timer = Math.floor(difference / 1000);
+  TIME.innerHTML = timer;
+  ALERTTIME.innerHTML = timer;
+}
+
+function stopTimer() {
+  clearInterval(myTimer);
+}
+
 function cardClicked(clickEvent) {
+  if (gamestart === 0) {
+    start = Date.now();
+    myTimer = setInterval(timerFunc, 1000);
+    gamestart = 1;
+  }
+
   // Tracks current cards class list for matching and catch purposes.
   let thisEvent = clickEvent.target.classList;
   console.log('Why? ' + thisEvent);
@@ -272,9 +278,9 @@ function replay() {
   scoreBox2.appendChild(scoreStars2);
   scoreBox3.appendChild(scoreStars3);
   timer = 0;
-  start = Date.now();
+  gamestart = 0
+  stopTimer();
   TIME.innerHTML = timer;
-  myTimer = setInterval(timerFunc, 1000);
 }
 
 function alertReplay() {
