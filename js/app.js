@@ -177,7 +177,7 @@ function cardClicked(clickEvent) {
   console.log('Why? ' + thisEvent);
 
   // Limits game code to not include already matched cards or clicking the deck.
-  if (thisEvent != 'card match' && thisEvent != 'deck') {
+  if (thisEvent != 'card match' && thisEvent != 'deck' && thisEvent == 'card') {
 
     clickEvent.target.classList.add('match');
     openCards.push(clickEvent.target);
