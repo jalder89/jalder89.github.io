@@ -21,7 +21,19 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Game
+## Games
 
-The game is a simple memory game where you are given a deck of cards to match. The game will track how long it takes for you to complete and provide a score.
+The games are a collection of small projects I've built in a few Unity courses and through Udacity.
+
+You'lle find these games here:
+1. A memory game: https://wbarnes1989.github.io/memory
+2. An endless runner: https://wbarnes1989.github.io/prototype-3
+3. A clicky fruit game: https://wbarnes1989.github.io/prototype-5
+
+
+The memory game is a simple game where you are given a deck of cards to match. The game will track how long it takes for you to complete and provide a score.
 Time doesn't affect your score but the number of moves that you make will.
+
+The endless runner is similar to other runner games where you have to jump to avoid obstacles with the space bar. Currently you'll need to refresh your browser to try again.
+
+Clicky Fruit is a game similar to fruit ninja where you have to click fruits and items that fly on screen while avoiding the random bombs. This game features a score UI and restart functionality.
