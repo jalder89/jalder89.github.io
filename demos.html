@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="js/nav.js"></script>
+    <title>Jessica's Portfolio Site</title>
+  </head>
+  <body>
+    <!--constructs the header of the page, includes avatar/logo, title, and navicon-->
+    <header class="top">
+      <div class="container">
+        <div class="avatar box">
+          <a href="https://www.linkedin.com/in/wbarnes1989"><img id=prof-image src="images/profile.jpg" alt="Profile image"></a>
+        </div>
+        <div class="title-bar box">
+          <h1>Jessica's Profile</h1>
+        </div>
+        <!--Uses divs to construct a navicon that reacts to clicks-->
+        <div class="nav-container" onclick="myFunction(this)">
+          <div class="burg1"></div>
+          <div class="burg2"></div>
+          <div class="burg3"></div>
+        </div>
+      </div>
+    </header>
+    <!--Builds nav drawer and adds an unordered list of nav links-->
+    <nav id="drawer">
+      <div class=box>
+      <h2 id="nav-head">Navigation</h2>
+      <ul id=navul>
+        <li class="nav-list"><a href="index.html" class="nav-link">Index</a></li>
+        <li class="nav-list"><a href="demos.html" class="nav-link">Demos</a>&#60;&#8209;</li>
+        <li class="nav-list"><a href="hobby.html" class="nav-link">Hobbies</a></li>
+        <li class="nav-list"><a href="https://www.linkedin.com/in/jalder89/" target="_blank" class="nav-link">LinkedIn</a></li>
+        <li class="nav-list"><a href="https://github.com/jalder89" target="_blank" class="nav-link">Github</a></li>
+        <li class="nav-list"><a href="https://www.emilyai.net" target="_blank">Emily AI</a></li>
+      </ul>
+    </div>
+    </nav>
+    <!--Denotes the Overview section of the page. This includes the main chunk of this pages data-->
+    <main class="overview">
+      <div class="container">
+        <section class="demos box">
+          <h1>Demos</h1>
+          <p>These demos are a collection of projects that I've built while learning different types of development. Most projects will be webapp or game related, but I'm currently learning more frontend development to add to the collection. You can check my stuff out at the links below.</p>
+          <p><strong>Important Unity Note: </strong>After opening a Unity demo, you must click the Unity window for sound and control. Unity's web player is not built for Mobile.</p>
+        </section>
+        <section class="demo box">
+          <a href="https://www.emilyai.net" target="_blank"><h2>Emily AI</h2></a>
+          <div class="container">
+            <img class="demo-image" src="img/emily_ai_512.png" alt="Emily AI">
+          </div>
+          <p>Emily AI is a Slack App that uses OpenAI's GPT-3 API to generate responses to messages in Slack. Emily AI is built using JavaScript, Node, Express. Axios, and MongoDB. The build explicitly avoids Slack's Bolt SDK in order to show familiarity working with Express, OAuth, Signature Verification, and Slack's API directly.</p>
+          <p>Emily's memory is stored in a MongoDB database along with the encrypted Access Token for your Slack workspace. Access Tokens are encrypted using the Node Crypto library and the AES-256-GCM algorithm. Tokens are fetched and decrypted at runtime during the specific API call being made to Slack.</p>
+          <p>Emily AI is in active development and you can find the project's Github repo here: <a href="https://github.com/jalder89/Emily-AI-GPT3">https://github.com/jalder89/Emily-AI-GPT3</a></p>
+        </section>
+        <section class="demo box">
+          <a href="https://jalder89.github.io/retrowaverider" target="_blank"><h2>Retrowave Rider</h2></a>
+          <div class="container">
+            <img class="demo-image" src="img/retrowave-rider.png" alt="Retrowave Rider">
+          </div>
+          <p>A Unity demo of a parallax scene I through together in about a day for a fellow indie developer in Unity. The demo features music, parallax backgrounds, and an animated car that you can move with A & D.</p>
+        </section>
+        <section class="demo box">
+          <a href="https://jalder89.github.io/memory" target="_blank"><h2>Memory Match Game</h2></a>
+          <div class="container">
+            <img class="demo-image" src="img/memory-match.png" alt="Memory Match">
+          </div>
+          <p>A simple game where you are given a deck of cards to match. The game will track how long it takes for you to complete and provide a score. Time doesn't affect your score but the number of moves that you make will.</p>
+        </section>
+        <section class="demo box">
+          <a href="https://jalder89.github.io/prototype-5" target="_blank"><h2>Clicky Fruit</h2></a>
+          <div class="container">
+            <img class="demo-image" src="img/clicky-fruit.png" alt="Clicky Fruit">
+          </div>
+          <p>Clicky Fruit is a Unity game similar to fruit ninja where you have to click fruits and items that fly on screen while avoiding the random bombs. This game features a score UI and restart functionality.</p>
+        </section>
+        <section class="demo box">
+          <a href="https://jalder89.github.io/prototype-3" target="_blank"><h2>Endless Runner</h2></a>
+          <div class="container">
+            <img class="demo-image" src="img/endless-runner.png" alt="Endless Runner">
+          </div>
+          <p>The endless runner is a very simply runner game from when I first started learning Unity. The player has to jump to avoid obstacles with the space bar and the game ends if you hit an obstacle. Currently you'll need to refresh your browser to try again.</p>
+      </div>
+    </main>
+    <footer>
+      <p>Navicon built with help from the awesome instruction at <cite><a href="https://www.w3schools.com/howto/howto_css_menu_icon.asp">W3schools</a></cite></p>
+    </footer>
+  </body>
+</html>

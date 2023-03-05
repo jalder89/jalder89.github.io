@@ -1,14 +1,11 @@
 /* Global Style sets background,
-aligns default h1 and h2 tags nave elents to center */
+aligns default h1 and h2 tags nav elents to center */
 body {
   background-image: radial-gradient(cyan 65%, lime);
+  font-family: monospace;
 }
 
-h1 {
-  text-align: center;
-}
-
-h2 {
+h1, h2 {
   text-align: center;
 }
 
@@ -27,16 +24,19 @@ h2 {
   padding: 1%;
 }
 
-.overview {
-  background-color: white;
+/* style for demo box image containers */
+.box > .container {
+  display: flex;
+  justify-content: center;
 }
 
-.hobbies {
-  background-color: white;
+/* Sets size for demo box images */
+.demo-image {
+  width: 256px;
 }
 
-.incomplete {
-  text-decoration: line-through;
+.overview, .hobbies {
+  background-color: antiquewhite;
 }
 
 #nav-head {
@@ -58,12 +58,21 @@ h2 {
   padding-bottom: 15px;
 }
 
+.nav-list > a:visited {
+  color: inherit;
+}
+
 .hobbyimg {
   width: 100%;
 }
 
+.float-image {
+  box-shadow: 10px 10px 5px grey;
+  background-color: rgba(0, 0, 0, .5);
+}
+
 footer {
-  background-color: white;
+  background-color: rgba(255, 255, 255);
 }
 
 /* Very Small Screen */
@@ -539,6 +548,6 @@ footer {
 
   .float-image {
     float: right;
-    width: 50%
+    width: 50%;
   }
 }
