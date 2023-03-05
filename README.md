@@ -1,4 +1,4 @@
-## [Portfolio Site] (jalder89.github.io)
+## [Portfolio Site](https://jalder89.github.io)
 
 The site is a portfolio site I built working through the Udacity Front-end nanodegree. I'm not a designer, so it is a bit 90s internet in looks, but it has an interactive nav bar and some pages about me. I also host it on github pages so that my Unity game demos can be easily found online. I'm currently learning bootstrap and hoping to update the design in the future.
 
