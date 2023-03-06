@@ -32,7 +32,7 @@ h1, h2 {
 
 /* Sets size for demo box images */
 .demo-image {
-  width: 256px;
+  width: 25%;
 }
 
 .overview, .hobbies {
