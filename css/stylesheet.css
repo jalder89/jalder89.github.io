@@ -183,17 +183,6 @@ footer {
     border: 2px solid blue;
   }
 
-  .container {
-    width: 97%;
-    height: 100%;
-    overflow: auto;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-
   /* Nav transform and animation from Udacity course Moves nav off screen.
   Also, we make this happen over time with a nice snappy transition. */
   nav {
