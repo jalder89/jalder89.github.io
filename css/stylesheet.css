@@ -457,6 +457,10 @@ footer {
     padding: 1%;
   }
 
+  .demos.box  p {
+    width: 75%;
+  }
+
   .top {
     padding: 1%;
     border: 2px solid blue;
