@@ -454,11 +454,7 @@ footer {
   }
 
   p {
-    padding: 1%;
-  }
-
-  .demos .box  p {
-    width: 75%;
+    padding: 1% 10%;
   }
 
   .top {
